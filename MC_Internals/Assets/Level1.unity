@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 336758359}
   - component: {fileID: 336758361}
   - component: {fileID: 336758362}
+  - component: {fileID: 336758363}
   m_Layer: 0
   m_Name: Pug1
   m_TagString: Untagged
@@ -214,6 +215,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edebaee6ca924e47a9753e7ec16f7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+--- !u!50 &336758363
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336758358}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &475396018
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +300,7 @@ GameObject:
   - component: {fileID: 894235772}
   - component: {fileID: 894235771}
   - component: {fileID: 894235773}
+  - component: {fileID: 894235774}
   m_Layer: 0
   m_Name: Pug2
   m_TagString: Untagged
@@ -357,6 +380,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49675336
+--- !u!50 &894235774
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894235770}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &923253917
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,14 +598,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1520723157
 GameObject:
   m_ObjectHideFlags: 0
