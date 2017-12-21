@@ -10,11 +10,33 @@ public class PugMovement : MonoBehaviour {
     Vector2 playerSize;
     public Rigidbody2D rb;
 
+    public Transform BoundaryPoints;
+
+    Boundary PlayerBoundary;
+
+    struct Boundary
+    {
+        public float Up, Down, Left, Right;
+
+        public Boundary(float up, float down, float left, float right)
+        {
+            Up = up;
+            Down = down;
+            Left = left;
+            Right = right;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
         playerSize = gameObject.GetComponent<SpriteRenderer>().bounds.extents;
         rb = GetComponent<Rigidbody2D>();
+
+        PlayerBoundary = new Boundary(BoundaryPoints.GetChild(0).position.y,
+                                      BoundaryPoints.GetChild(1).position.y,
+                                      BoundaryPoints.GetChild(2).position.x,
+                                      BoundaryPoints.GetChild(3).position.x);
     }
 
     // Update is called once per frame
@@ -44,7 +66,10 @@ public class PugMovement : MonoBehaviour {
             if (canMove)
             {
                 //transform.position = mousePos;
-                rb.MovePosition(mousePos);
+
+                Vector2 clampedMousePos = new Vector2(Mathf.Clamp(mousePos.x, PlayerBoundary.Left, PlayerBoundary.Right), Mathf.Clamp(mousePos.y, PlayerBoundary.Down, PlayerBoundary.Up));
+
+                rb.MovePosition(clampedMousePos);
             }
         }
         else
