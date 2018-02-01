@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class StrickerScript : MonoBehaviour
 {
-
-
-    public float speed = 5f;
     public Vector2 dir;
     public Rigidbody2D rb;
-    public float maxSpeed = 45f;
+    public float maxSpeed = 50f;
 
     // Use this for initialization
     void Start()
@@ -28,14 +25,14 @@ public class StrickerScript : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
-        rb.AddForce(dir * speed * Time.deltaTime);
+        rb.AddForce(dir * maxSpeed * Time.deltaTime);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxSpeed , maxSpeed), Mathf.Clamp(rb.velocity.y, -maxSpeed , maxSpeed));
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
     public void OnTriggerEnter2D(Collider2D col)

@@ -827,7 +827,7 @@ MonoBehaviour:
   speed: 50
   dir: {x: 0, y: 0}
   rb: {fileID: 0}
-  maxSpeed: 15
+  maxSpeed: 50
 --- !u!50 &1265674498
 Rigidbody2D:
   serializedVersion: 4
@@ -1000,7 +1000,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1025,7 +1025,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1050,7 +1050,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1075,7 +1075,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1100,7 +1100,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1125,7 +1125,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520723157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac8b5917a8f7cee4086cdcef413614ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
