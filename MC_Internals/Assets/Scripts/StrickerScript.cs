@@ -9,6 +9,7 @@ public class StrickerScript : MonoBehaviour
     public float speed = 5f;
     public Vector2 dir;
     public Rigidbody2D rb;
+    public float maxSpeed = 45f;
 
     // Use this for initialization
     void Start()
@@ -34,7 +35,7 @@ public class StrickerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxSpeed , maxSpeed), Mathf.Clamp(rb.velocity.y, -maxSpeed , maxSpeed));
     }
 
     public void OnTriggerEnter2D(Collider2D col)
