@@ -7,24 +7,26 @@ public class PugMovement : MonoBehaviour {
 
     bool wasJustClicked = true;
     bool canMove;
-    Vector2 playerSize;
-    public Rigidbody2D rb;
 
-    public Transform BoundaryPoints;
+    Rigidbody2D rb;
 
-    Boundary PlayerBoundary;
+    public Transform BoundaryHolder;
 
+    Boundary playerBoundary;
+
+    Collider2D playerCollider;
 
     // Use this for initialization
     void Start()
     {
-        playerSize = gameObject.GetComponent<SpriteRenderer>().bounds.extents;
         rb = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
 
-        PlayerBoundary = new Boundary(BoundaryPoints.GetChild(0).position.y,
-                                      BoundaryPoints.GetChild(1).position.y,
-                                      BoundaryPoints.GetChild(2).position.x,
-                                      BoundaryPoints.GetChild(3).position.x);
+        playerBoundary = new Boundary(BoundaryHolder.GetChild(0).position.y,
+                                      BoundaryHolder.GetChild(1).position.y,
+                                      BoundaryHolder.GetChild(2).position.x,
+                                      BoundaryHolder.GetChild(3).position.x);
+
     }
 
     // Update is called once per frame
@@ -38,10 +40,7 @@ public class PugMovement : MonoBehaviour {
             {
                 wasJustClicked = false;
 
-                if ((mousePos.x >= transform.position.x && mousePos.x < transform.position.x + playerSize.x ||
-                mousePos.x <= transform.position.x && mousePos.x > transform.position.x - playerSize.x) &&
-                (mousePos.y >= transform.position.y && mousePos.y < transform.position.y + playerSize.y ||
-                mousePos.y <= transform.position.y && mousePos.y > transform.position.y - playerSize.y))
+                if (playerCollider.OverlapPoint(mousePos))
                 {
                     canMove = true;
                 }
@@ -53,10 +52,10 @@ public class PugMovement : MonoBehaviour {
 
             if (canMove)
             {
-                //transform.position = mousePos;
-
-                Vector2 clampedMousePos = new Vector2(Mathf.Clamp(mousePos.x, PlayerBoundary.Left, PlayerBoundary.Right), Mathf.Clamp(mousePos.y, PlayerBoundary.Down, PlayerBoundary.Up));
-
+                Vector2 clampedMousePos = new Vector2(Mathf.Clamp(mousePos.x, playerBoundary.Left,
+                                                                  playerBoundary.Right),
+                                                      Mathf.Clamp(mousePos.y, playerBoundary.Down,
+                                                                  playerBoundary.Up));
                 rb.MovePosition(clampedMousePos);
             }
         }
