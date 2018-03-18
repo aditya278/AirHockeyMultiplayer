@@ -8,6 +8,8 @@ public class AIMovementScript : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector2 startingPosition;
 
+    public Transform spawnPoint;
+
     public Rigidbody2D Puck;
 
     public Transform PlayerBoundaryHolder;
@@ -74,6 +76,6 @@ public class AIMovementScript : MonoBehaviour {
 
     public void ResetPosition()
     {
-        rb.position = startingPosition;
+        rb.position = spawnPoint.position;
     }
 }

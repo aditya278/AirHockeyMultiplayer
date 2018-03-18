@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
 
@@ -55,4 +56,9 @@ public class UIManager : MonoBehaviour {
         aiScript.ResetPosition();
     
      }
+
+    public void MainMenuBtn()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
