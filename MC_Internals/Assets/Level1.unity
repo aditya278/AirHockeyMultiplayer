@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 137357535}
   - component: {fileID: 137357534}
   - component: {fileID: 137357533}
+  - component: {fileID: 137357538}
   m_Layer: 0
   m_Name: PlayerBlue
   m_TagString: Untagged
@@ -367,7 +368,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 137357532}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92c0438b43506374f828dfff315c1009, type: 3}
   m_Name: 
@@ -468,6 +469,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137357538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137357532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edebaee6ca924e47a9753e7ec16f7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundaryHolder: {fileID: 1536815026}
 --- !u!1 &162040668
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +759,7 @@ GameObject:
   - component: {fileID: 450010482}
   - component: {fileID: 450010483}
   m_Layer: 0
-  m_Name: PlayerGoal
+  m_Name: PlayerRedGoal
   m_TagString: PlayerGoal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +975,7 @@ GameObject:
   - component: {fileID: 680204717}
   - component: {fileID: 680204718}
   m_Layer: 0
-  m_Name: AIGoal
+  m_Name: PlayerBlueGoal
   m_TagString: AiGoal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1837,7 +1850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536815026}
   m_Layer: 0
-  m_Name: Boundary2-AI
+  m_Name: Boundary2-PlayerBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1869,7 +1882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609881229}
   m_Layer: 0
-  m_Name: Boundary1
+  m_Name: Boundary1-PlayerRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
