@@ -71,4 +71,9 @@ public class AIMovementScript : MonoBehaviour {
                     movementSpeed * Time.fixedDeltaTime));
         }
     }
+
+    public void ResetPosition()
+    {
+        rb.position = startingPosition;
+    }
 }

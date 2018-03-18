@@ -16,10 +16,13 @@ public class PugMovement : MonoBehaviour {
 
     Collider2D playerCollider;
 
+    Vector2 startingPosition;
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        startingPosition = rb.position;
         playerCollider = GetComponent<Collider2D>();
 
         playerBoundary = new Boundary(BoundaryHolder.GetChild(0).position.y,
@@ -63,5 +66,10 @@ public class PugMovement : MonoBehaviour {
         {
             wasJustClicked = true;
         }
+    }
+
+    public void ResetPosition()
+    {
+        rb.position = startingPosition;
     }
 }
