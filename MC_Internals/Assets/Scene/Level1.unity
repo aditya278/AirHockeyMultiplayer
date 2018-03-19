@@ -869,7 +869,7 @@ MonoBehaviour:
   AiScoreTxt: {fileID: 48134243}
   PlayerScoreTxt: {fileID: 773718389}
   uiManager: {fileID: 617646908}
-  MaxScore: 2
+  MaxScore: 5
 --- !u!4 &617646905
 Transform:
   m_ObjectHideFlags: 0
