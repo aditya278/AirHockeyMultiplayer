@@ -1130,6 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7727d6945c652e8419062c56afc2fbd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiPlayerToggle: {fileID: 810066318}
 --- !u!4 &2116838844
 Transform:
   m_ObjectHideFlags: 0

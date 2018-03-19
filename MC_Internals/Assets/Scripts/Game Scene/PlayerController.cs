@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public List<PugMovement> Players = new List<PugMovement>();
+    public static List<PugMovement> Players = new List<PugMovement>();
 
     public GameObject AiPlayer;
 
+
+
     private void Start()
     {
+
+       // DontDestroyOnLoad(gameObject);
+
         if (ValueScript.IsMultiplayer)
         {
             AiPlayer.GetComponent<PugMovement>().enabled = true;
             AiPlayer.GetComponent<AIMovementScript>().enabled = false;
+
         }
         else
         {

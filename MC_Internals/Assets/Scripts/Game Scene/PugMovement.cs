@@ -6,7 +6,7 @@ public class PugMovement : MonoBehaviour {
 
 
     Rigidbody2D rb;
-    Vector2 startingPosition;
+    public Transform startingPosition;
 
     public Transform BoundaryHolder;
 
@@ -22,7 +22,7 @@ public class PugMovement : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        startingPosition = rb.position;
+        //startingPosition = rb.position;
         PlayerCollider = GetComponent<Collider2D>();
 
         playerBoundary = new Boundary(BoundaryHolder.GetChild(0).position.y,
@@ -34,11 +34,14 @@ public class PugMovement : MonoBehaviour {
 
     private void OnEnable()
     {
-        Controller.Players.Add(this);
+        Debug.Log("Enabled!");
+        PlayerController.Players.Add(this);
     }
     private void OnDisable()
     {
-        Controller.Players.Remove(this);
+
+        Debug.Log("Disabled!");
+        PlayerController.Players.Remove(this);
     }
 
     public void MoveToPosition(Vector2 position)
@@ -52,6 +55,6 @@ public class PugMovement : MonoBehaviour {
 
     public void ResetPosition()
     {
-        rb.position = startingPosition;
+        rb.position = startingPosition.position;
     }
 }

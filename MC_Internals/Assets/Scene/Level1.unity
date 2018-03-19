@@ -368,13 +368,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 137357532}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92c0438b43506374f828dfff315c1009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxMovementSpeed: 10
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 294869408}
   Puck: {fileID: 113031436}
   PlayerBoundaryHolder: {fileID: 1536815026}
   PuckBoundaryHolder: {fileID: 1328828501}
@@ -390,7 +390,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edebaee6ca924e47a9753e7ec16f7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPosition: {fileID: 294869408}
   BoundaryHolder: {fileID: 1536815026}
   Controller: {fileID: 617646909}
 --- !u!1 &162040668
@@ -1008,7 +1009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7baaf05dc13a2b14394e9681b05b89c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: []
   AiPlayer: {fileID: 137357532}
 --- !u!1 &680204716
 GameObject:
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.108185545, g: 0.6397059, b: 0.6177119, a: 1}
+  m_Color: {r: 0.6397059, g: 0.108185545, b: 0.108185545, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2489,6 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edebaee6ca924e47a9753e7ec16f7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPosition: {fileID: 1970751709}
   BoundaryHolder: {fileID: 1609881229}
   Controller: {fileID: 617646909}
 --- !u!50 &1831749518
@@ -2503,7 +2504,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

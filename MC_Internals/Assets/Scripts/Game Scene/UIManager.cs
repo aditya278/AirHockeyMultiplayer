@@ -59,6 +59,7 @@ public class UIManager : MonoBehaviour {
 
     public void MainMenuBtn()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 }
